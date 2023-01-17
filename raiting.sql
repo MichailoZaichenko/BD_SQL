@@ -21,3 +21,17 @@ INSERT INTO "Raiting" (Second_name, First_name, Patronymic, Points, Gems) VALUES
 INSERT INTO "Raiting" (Second_name, First_name, Patronymic, Points, Gems) VALUES ("Каштаєв","Артур","Віталійович",220, 90);
 INSERT INTO "Raiting" (Second_name, First_name, Patronymic, Points, Gems) VALUES ("Тараканов","Сергiй","Михайлович",185, 80);
 INSERT INTO "Raiting" (Second_name, First_name, Patronymic, Points, Gems) VALUES ("Стрельченко","Дмитро","Олександрович",142, 60);
+
+-- Удалить студентов у которых рейтинг рейтинг меньше заданного значения (любое число)
+DELETE FROM "Raiting" 
+WHERE id >5;
+
+-- Увеличить в своей записи рейтинг на 5 ед.
+UPDATE "Raiting" 
+SET Points == Points + 5
+WHERE id > 0; 
+
+-- Вывести всех студентов у которых рейтинг больше чем у вас.
+SELECT *
+FROM "Raiting"
+WHERE Points>379;
